@@ -1,0 +1,735 @@
+* {
+    box-sizing: border-box;
+}
+/* Ustawienia dla całej strony */
+html, body {
+    height: 100%; /*jakby cos nie dzialalo to sprawdzic */
+    padding: 0px;
+    margin: 0px;
+    background: #f6f6f6;
+    font-family: 'Montserrat', sans-serif;
+
+}
+h1 {
+    font-family: 'Lobster', sans-serif;
+}
+
+/* Styl fontu dla nagłówka w contencie */
+h2, h3, h4, h5, h6 {
+    font-family: 'Montserrat', sans-serif;
+    color: #444;
+    font-size: 24px;
+    margin: 5px;
+}
+
+hr {
+    margin-bottom: 20px;
+}
+
+/* Styl dla linków */
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+/* Element do czyszczenia floatów */
+.clearfix::after {
+    content: '';
+    display: block;
+    clear: both;
+}
+
+/* Styl przycisku */
+.btn {
+    padding: .5rem 1rem;
+    background: #5a5a5a8e;
+    color: white;
+    border-radius: .25rem;
+}
+
+.btn-big {
+    padding: .7rem 1.3rem;
+    line-height: 1.3rem;
+}
+
+/* Efekt hover na przycisk */
+.btn:hover {
+    color: white;
+    background: #444;
+}
+
+.msg {
+    width: 100%;
+    margin: 5px auto;
+    padding: 8px;
+    border-radius: 5px;
+    list-style: none;
+}
+
+.success {
+    color: #3a6e3a;
+    border: 1px solid #3a6e3a;
+    background: #bcf5bc;
+}
+
+.error {
+    color: #884b4b;
+    border: 1px solid #884b4b;
+    background: #f5bcbc;
+}
+
+/* NAVBAR */
+
+/* Styl dla nagłówka strony */
+header {
+    background: #000000;
+    height: 66px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* Kolor tekstu w nagłówku w logo */
+header * {
+    color: rgb(248, 248, 248);
+}
+
+/* Styl dla logo */
+header .logo {
+    float: left;
+    height: inherit;
+    margin-left: 2em;
+}
+
+/* Styl dla tekstu w logo */
+header .logo-text {
+    margin: 12px;
+    font-family: 'Lobster', sans-serif;
+}
+
+/* Kolor dla fragmentu tekstu w logo */
+header .logo-text span {
+    color: #00dbe2;
+}
+
+/* SEARCHBAR */
+
+ /* Styl dla searchbara */
+ header .search-bar {
+    width: 20vw;
+    margin-left: 14em;
+    
+}
+
+/* Styl dla inputa w searchbarze */
+header .search-bar input[type=text] {
+    padding: 10px;
+    border: none;
+    border-top-left-radius: 2rem;
+    border-bottom-left-radius: 2rem;
+    font-size: 1em;
+    width: 90%;
+    background: #f1f1f1;
+    color: #000000;
+    align-items: center;
+    font-family: 'Montserrat', sans-serif;
+}
+ 
+/* Obwódka wokół searchbara po naciśnięciu */
+header .search-bar input[type=text]:focus {
+    outline: none;
+}
+
+/* Styl dla buttona search w searchbarze */
+header .search-bar button {
+    padding: 10px;
+    border: none;
+    border-top-right-radius: 2rem;
+    border-bottom-right-radius: 2rem;
+    font-size: 1.03em;
+    width: 10%;
+    float: right;
+    cursor: pointer;
+    outline: none;
+}
+
+/* Styl ikony search */
+header .search-bar button .fa-search {
+    color: #000000;
+}
+
+/* Styl dla listy nawigacyjnej */
+header ul {
+    float: right;
+    margin: 0px;
+    padding: 2px;
+    list-style: none;
+}
+
+
+/* Styl dla elementów listy nawigacyjnej */
+header ul li {
+    float: left;
+    position: relative;
+}
+
+/* Styl dla rozwijanego podmenu */
+header ul li ul {
+    position: absolute;
+    right: 0px;
+    width: 180px;
+    display: none;
+    z-index: 88888;
+}
+
+/* Pokazuje podmenu po najechaniu na element listy */
+header ul li:hover ul {
+    display: block;
+}
+
+/* Styl dla elementów w rozwijanym podmenu */
+header ul li ul li {
+    width: 100%;
+}
+
+/* Styl dla linków w rozwijanym podmenu */
+header ul li ul li a {
+    padding: 10px;
+    background: white;
+    color: #444;
+}
+
+/* Styl dla linku "Wyloguj się" w rozwijanym podmenu */
+header ul li ul li a.logout {
+    color: red;
+}
+
+header ul li ul li a.logout .fa-sign-out {
+    color: red;
+}
+
+/* Podświetlanie linku po najechaniu myszą */
+header ul li ul li a:hover {
+    background: #bbbbbb;
+}
+
+/* Styl dla linków w głównej nawigacji */
+header ul li a {
+    display: block;
+    padding: 21px;
+    font-size: 1.1em;
+    text-decoration: none;
+}
+
+/* Podświetlanie linku w głównej nawigacji po najechaniu myszą */
+header ul li a:hover {
+    background-color: #5a5a5a8e;
+    transition: 0.5s;
+}
+
+/* Styl dla przycisku rozwijania menu*/
+header .menu-toggle {
+    display: none;
+}
+
+/* Styl dla contentu*/
+.content {
+    width: 90%;
+    margin: 30px auto 30px;
+    min-height: 100%;
+}
+
+/* Ustawienia dla głównego kontenera z treścią oraz paskiem bocznym */
+.content .main-content {
+    width: 70%;
+    float: left;
+}
+
+/* Styl dla treści posta w post.html */
+.post-content {
+    background: rgba(255, 255, 255, 0.452);
+    padding: 20px 50px;
+    font-size: 1.1em;
+    border-radius: 5px;
+}
+
+/* Styl dla pojedynczych skladnikow listy przygotowanie */
+.post-content ul li {
+    padding: 15px 0px 15px 0px;
+}
+
+/* Miejsce na zdjęcie pod przygotowaniem */
+.imgplace {
+    max-width: 100%;
+	height: auto;
+    margin: 10px 0;
+    border-radius: 5px;
+    overflow: hidden;
+}
+
+/* styl dla zdjecia */
+.imgplace .image-single {
+    max-height: 700px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: auto;
+    max-width: 100%;
+    border-radius: 5px;
+}
+
+/* Styl dla pojedynczego posta na stronie głównej */
+.content .main-content .post {
+    width: 95%;
+    height: 270px;
+    margin: 20px auto;
+    border-radius: 5px;
+    background: rgba(255, 255, 255, 0.452);
+    position: relative;
+    
+}
+
+/* Styl daty */
+.far.calendar {
+    width: 100%;
+    position: relative;
+    background: #f6f6f6;
+    margin: 10px 0 10px;
+    font-family: 'Montserrat', sans-serif;
+    padding-left: 36px;
+    
+}
+
+/* Styl kropki */
+.far.calendar .dot {
+    width: 8px;
+    height: 8px;
+    background: black;
+    border-radius: 50%;
+    display: inline-block;
+    position: absolute;
+    margin-left: 25px;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+/* Stylizacja przycisku "zobacz przepis" w obrębie pojedynczego posta */
+.content .main-content .post .read-more {
+    position: absolute;
+    bottom: 10px;
+    right: 10px;
+}
+
+/* Ustawienia dla obrazka wewnątrz pojedynczego posta */
+.content .main-content .post .post-image {
+    width: 60%;
+    max-width: 60%;
+    height: 100%;
+    float: left;
+    border-radius: 5px 0px 0px 5px;
+}
+
+/* Ustawienia dla obszaru podglądu tekstu posta wewnątrz pojedynczego posta */
+.content .main-content .post .post-preview {
+    width: 40%;
+    padding: 10px;
+    float: right;
+}
+
+/* Styl tytułu postów */
+.content .main-content .recent-post-title{
+    margin: 15px;
+}
+
+/* Ustawienia dla obszaru bocznego (sidebar) */
+.content .sidebar {
+    width: 30%;
+    float: left;
+    height: 300px;
+    padding: 0px 20px;
+}
+
+/* Styl dla treści sidebara */
+.content .sidebar .section.ingredients {
+    padding: 20px;
+    margin-bottom: 20px;
+    background: rgba(255, 255, 255, 0.452);
+    border-radius: 5px;
+    margin-top: 64px;
+}
+
+/* Styl dla listy sidebara */
+.content .sidebar .section.ingredients ul {
+    margin: 0px;
+    padding: 0px;
+    list-style: none;
+}
+
+/* Styl dla pojedynczych skladnikow listy sidebara */
+.content .sidebar .section.ingredients ul li{
+    display: block;
+    padding: 15px 0px 15px 0px;
+    border-bottom: 1px solid #e0e0e0;
+}
+
+/* AUTH PAGES */
+
+/* Styl dla całości */
+.auth-content {
+    width: 30%;
+    margin: 50px auto;
+    padding: 20px;
+    background: white;
+    border-radius: 5px;
+}
+
+/* Styl dla tytułu (zarejestruj sie) */
+.auth-content .form-title {
+    text-align: center;
+}
+
+/* Styl dla pojedynczych elementow (nazwa uzytkownika, email...) */
+.auth-content form div {
+    margin-bottom: 15px;
+}
+
+/* umiejscowienie paragrafu z zaloguj sie na srodku */
+.auth-content form p {
+    text-align: center;
+}
+
+/* Podkreślenie dla zaloguj sie */
+.auth-content form p a {
+    text-decoration: underline;
+}
+
+/* Styl input boxow */
+.auth-content .text-input{
+    width: 100%;
+    padding: 10px 15px;
+    font-size: 1.2em;
+    font-family: 'Montserrat', sans-serif;
+    border-radius: 5px;
+    border: 2px solid #a3a3a3c4;
+    color: #000000;
+}
+
+/* Styl buttona zarejestruj sie */
+.auth-content .btn {
+    border: 2px solid #00b3b9c4;
+    background: transparent;
+    color: #000000;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1em;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+/* Efekt po najechaniu na button */
+.auth-content .btn:hover {
+    background-color: #00b3b9c4;
+    color: black;
+}
+
+/* FOOTER */
+
+/* Styl footera górnego*/
+.footer {
+    background: #1d1d1d;
+    color: rgb(248, 248, 248);
+    height: 380px;
+    position: relative;
+}
+
+/* Zawartość footera górnego */
+.footer .footer-content {
+    height: 350px;
+    display: flex;
+}
+
+/* Style sekcji footera górnego */
+.footer .footer-content .footer-section {
+    flex: 1;
+    padding: 25px;
+}
+
+/* Kolor h1, h2 w footerze gornym */
+.footer .footer-content h1,
+.footer .footer-content h2 {
+    color: rgb(248, 248, 248);
+}
+
+/* Kolor części logo*/
+.footer .footer-content .about h1 span {
+    color: #00dbe2;
+}
+
+/* Numer i mail */
+.footer .footer-content .about .contact span {
+    display: block;
+    font-size: 1.1em;
+    margin-bottom: 8px;
+}
+
+/* tytuł socjali (środkowa sekcja) */
+.footer .footer-content .links .social-title {
+    margin: 30px;
+    text-align: center;
+}
+
+/* Wyśrodkowanie socjali*/
+.footer .footer-content .links .socials {
+    text-align: center;
+}
+
+/* Ikony socjali */
+.footer .footer-content .links .socials a {
+    border: 1px solid gray;
+    width: 50px;
+    height: 50px;
+    padding-top: 10px;
+    margin-right: 10px;
+    margin-left: 5px;
+    margin-top: 30px;
+    text-align: center;
+    display: inline-block;
+    font-size: 1.5em;
+    border-radius: 2rem;
+}
+
+/* Efekt po najechaniu na ikony socjali */
+.footer .footer-content .links .socials a:hover {
+    border: 1px solid white;
+    color: white;
+    transition: all .3s;
+}
+
+/* Tytuł sekcji z prawej */
+.footer .footer-content .contact-form .contact-title {
+    margin: 30px;
+    text-align: right;
+}
+
+/* Style textarea */
+.footer .footer-content .contact-form .contact-input {
+    background: #272727;
+    color: #bebdbd;
+    margin-bottom: 10px;
+    line-height: 1.4em;
+    padding: 0.9rem 1.4rem;
+    width: 100%;
+    border: none;
+    border-radius: 5px;
+    font-family: 'Montserrat', sans-serif;
+    resize: none;
+}
+
+/* Efekt po kliknięciu w textarea */
+.footer .footer-content .contact-form .contact-input:focus {
+    background: #1a1a1a;
+}
+
+/* Styl buttona do skontaktuj sie z nami */
+.footer .footer-content .contact-form .btn-big {
+    border: 2px solid #00b3b9c4;
+    background: transparent;
+    color: #e6e3e3;
+    font-family: 'Montserrat', sans-serif;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+/* Efekt po najechaniu na button */
+.footer .footer-content .contact-form .btn-big:hover {
+    background-color: #00b3b9c4;
+    color: black;
+}
+
+
+/* Dolny footer */
+.footer .footer-bottom {
+    background: rgba(0, 0, 0, 0.719);
+    color: rgb(248, 248, 248);
+    height: 50px;
+    width: 100%;
+    text-align: center;
+    position: absolute;
+    bottom: 0px;
+    left: 0px;
+    padding-top: 20px;
+}
+
+
+
+/* MEDIA RESPONSIVE */
+@media only screen and (max-width: 1250px) {
+   header {
+        display: block;
+        padding: 0;
+        position: relative;
+   }
+
+   .showing {
+        max-height: 100em;
+    }
+    
+   header .logo {
+        display: inline-block;
+    }
+   
+    header .search-bar {
+        width: 100%;
+        display: block;
+        padding: 10px 90px 10px 90px;
+        justify-content: center;
+        margin-left: 0;
+        background: #3a3a3a;
+        overflow: hidden;
+    }
+
+    header .search-bar input[type=text] {
+        width: 90%;
+        border: none;
+    }
+   
+    header .search-bar button {
+        width: 10%;
+        border: none;
+        padding-left: 1px;
+    }
+   
+    header ul {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        background: #444;
+        overflow: hidden;
+        max-height: 0px;
+        margin-bottom: 20px;
+    }
+
+    header ul li {
+        width: 100%;
+    }
+
+    header ul li ul {
+        position: static;
+        width: 100%;
+        display: block;
+    }
+
+    header ul li ul li a {
+        padding: 10px;
+        background: #444;
+        color: white;
+        padding-left: 50px;
+    }
+    
+    header ul li ul li a:hover {
+        background: #5a5a5a8e;
+    }
+    
+    header ul li ul li a.logout {
+        color: red;
+    }
+
+    header .menu-toggle {
+        display: block;
+        position: absolute;
+        right: 20px;
+        top: 20px;
+        font-size: 1.9em;
+        cursor: pointer;
+    }
+
+    .content {
+        width: 100%;
+    }
+
+    .content .main-content {
+        width: 100%;
+    }
+    
+    .footer {
+        height: 420px;
+    }
+
+    .content .main-content.single {
+        padding: 10px 20px;
+    }
+
+    .main-content-wrapper {
+        padding: 10px;
+    }
+    
+    .content .sidebar {
+        width: 100%;
+        height: auto;
+    }
+
+    .content .sidebar .section.ingredients {
+        margin-top: 10px;
+    }
+
+    .auth-content {
+        width: 50%;
+        margin: 150px auto;
+    }
+
+}
+
+@media only screen and (max-width: 790px) {
+
+    /* Styl footera górnego*/
+.footer {
+    height: auto;
+}
+
+/* Zawartość footera górnego */
+.footer .footer-content {
+    height: auto;
+    flex-direction: column;
+}
+
+.footer .footer-content .contact-form {
+    padding-bottom: 90px;
+}
+
+.footer .footer-content .contact-form .btn-big {
+    width: 100%;
+}
+
+.footer .footer-content .contact-form .contact-title {
+    text-align: center;
+}
+
+
+.content .main-content .post {
+    height: auto;
+}
+
+/* Ustawienia dla obrazka wewnątrz pojedynczego posta */
+.content .main-content .post .post-image {
+    max-width: 100%;
+    width: 100%;
+    border-radius: 5px 5px 0px 0px;
+}
+
+/* Ustawienia dla obszaru podglądu tekstu posta wewnątrz pojedynczego posta */
+.content .main-content .post .post-preview {
+    width: 100%;
+}
+
+.content .main-content .post .read-more {
+    position: static;
+    display: block;
+    width: 100%;
+    text-align: center;
+}
+
+.auth-content {
+    width: 90%;
+}
+
+}

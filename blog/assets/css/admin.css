@@ -1,0 +1,111 @@
+header {
+    background: #242424;
+}
+
+.admin-wrapper {
+    height: calc(100% - 66px);
+    display: flex;
+}
+
+.admin-wrapper .left-sidebar {
+    flex: 2;
+    height: 100%;
+    background: #353535;
+}
+
+.admin-wrapper .left-sidebar ul {
+    list-style: none;
+    margin: 0px;
+    padding: 0px;
+    color: aliceblue;
+}
+
+.admin-wrapper .left-sidebar ul li a {
+    padding: 18px;
+    display: block;
+    border-bottom: 1px solid #1f1f1f;
+}
+
+.admin-wrapper .left-sidebar ul li a:hover {
+    background: #1f1f1f;
+}
+
+.admin-wrapper .admin-content {
+    flex: 8;
+    height: 100%; 
+    padding: 40px 100px 100px;
+    overflow-y: scroll;
+    background: #f6f6f6;
+}
+
+.admin-content .page-title {
+    text-align: center;
+    margin-bottom: 1.5rem;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 1.1rem;
+}
+
+
+th, td {
+    padding: 15px;
+    text-align: left;
+    border-bottom: 1px solid #838383;   
+}
+
+
+.edit {
+    color: green;
+}
+
+.delete {
+    color: red;
+} 
+
+.publish {
+    color: blue;
+}
+
+.edit:hover, 
+.delete:hover,
+.publish:hover {
+    text-decoration: underline;
+}
+
+.text-input{
+    width: 100%;
+    padding: 10px 15px;
+    font-size: 1.2em;
+    font-family: 'Montserrat', sans-serif;
+    border-radius: 5px;
+    border: 2px solid #a3a3a3c4;
+    color: #000000;
+}
+
+.btn {
+    border: 2px solid #00b3b9c4;
+    background: transparent;
+    color: #000000;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1em;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+/* Efekt po najechaniu na button */
+.btn:hover {
+    background-color: #00b3b9c4;
+    color: black;
+}
+
+form div {
+    margin-bottom: 18px;
+}
+
+label {
+    font-size: 18px;
+    font-weight: bold;
+}
